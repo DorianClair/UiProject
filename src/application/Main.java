@@ -16,6 +16,7 @@ public class Main extends Application {
 	public int heightInches; //user's height in inches
 	public Date dateOfBirth; //user's date of birth
 	public double poundsPerWeek; //user's desired pounds to lose per week
+	public String gender; //user's gender
 	
 	public static final Controller CONTROLLER = new Controller();
 	public static final Model MODEL = new Model();
