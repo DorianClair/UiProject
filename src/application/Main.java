@@ -8,7 +8,7 @@ import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
 	
-	public static final Controller CONTROL = new Controller();
+	public static final Controller CONTROLLER = new Controller();
 	public static final Model MODEL = new Model();
 	public static final View VIEW = new View();
 	
@@ -18,7 +18,6 @@ public class Main extends Application {
 		try {
 			BorderPane root = new BorderPane();
 			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
