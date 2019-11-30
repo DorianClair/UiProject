@@ -31,6 +31,9 @@
 	    -fx-text-fill: #ffffff;
     -fx-padding: 10px;
 }
+.BorderPane {
+	-fx-background-color:  #4897ec;
+}
 .chart-vertical-grid-lines {
     -fx-stroke:#ffffff;
 }

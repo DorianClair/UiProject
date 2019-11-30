@@ -21,6 +21,8 @@ import javafx.scene.control.TextField;
 public class ChartScreen {
 	
 	public ChartScreen(BorderPane root) {
+		root.setCenter(null);
+		//root.getChildren().clear();
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 		System.out.println();
