@@ -46,8 +46,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			root = FXMLLoader.<BorderPane>load(getClass().getResource("Graph.fxml"));
-			new ChartScreen(root);
+			root = FXMLLoader.<BorderPane>load(getClass().getResource("SplashPage.fxml"));
+			//new ChartScreen(root);
 			//BorderPane root = new BorderPane();
 			scene = new Scene(root,800,450);
 			scene.getStylesheets().add(getClass().getResource("MainSheet.css").toExternalForm());
