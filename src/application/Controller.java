@@ -6,33 +6,25 @@ import javafx.fxml.FXMLLoader;
 
 public class Controller {
 	
+	//User clicks the enter into Icon
 	public void mouseReleased1() {
 		System.out.println("Enter info button was pressed");
-	    try {
-			Main.scene.setRoot(FXMLLoader.load(getClass().getResource("InformationEntry.fxml")));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 	}
+	//User clicks the graph Icon
 	public void mouseReleased2() {
 		System.out.println("chart button was pressed");
-		try {
-			Main.scene.setRoot(FXMLLoader.load(getClass().getResource("Graph.fxml")));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		new ChartScreen(Main.root);
 	}
+	
+	//User clicks on the clipBoard Icon
+	public void mouseReleased4() {
+		System.out.println("Clipboard button was pressed");
+	}
+
+	
+	//User clicks on the settings Icon
 	public void mouseReleased3() {
 		System.out.println("settings button was pressed");
-		try {
-			Main.scene.setRoot(FXMLLoader.load(getClass().getResource("EnterCaloriesCircleChart.fxml")));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	public Controller() {

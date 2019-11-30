@@ -58,3 +58,9 @@
     -fx-tick-length: 20;
     -fx-minor-tick-length: 10;
 }
+#weightPlsId {
+	-fx-padding: 7 0 0 0;
+}
+#dateLabel {
+	-fx-padding:  0 0 7 0;
+}
