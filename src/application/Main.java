@@ -2,7 +2,6 @@ package application;
 	
 import java.io.File;
 import java.net.URL;
-<<<<<<< Updated upstream
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -11,14 +10,12 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
-=======
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
->>>>>>> Stashed changes
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
@@ -51,32 +48,6 @@ public class Main extends Application {
 	public static Scene scene;
 	public static BorderPane root;
 	
-	@Override
-	public void start(Stage primaryStage) {
-		try {
-<<<<<<< Updated upstream
-			root = FXMLLoader.<BorderPane>load(getClass().getResource("SplashPage.fxml"));
-			//new ChartScreen(root);
-			//BorderPane root = new BorderPane();
-			scene = new Scene(root,800,450);
-			scene.getStylesheets().add(getClass().getResource("MainSheet.css").toExternalForm());
-
-			
-
-=======
-			
-			URL url = new File("fxmlScreens/InformationEntry.fxml").toURI().toURL();
-			BorderPane root = FXMLLoader.load(url);
-		
-			Scene scene = new Scene(root,450,300);
->>>>>>> Stashed changes
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		SQLite db = new SQLite();
 		db.getConnection();
@@ -87,4 +58,24 @@ public class Main extends Application {
 		}
 		launch(args);
 	}
+	
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			root = FXMLLoader.<BorderPane>load(getClass().getResource("SplashPage.fxml"));
+			//new ChartScreen(root);
+			//BorderPane root = new BorderPane();
+			scene = new Scene(root,800,450);
+			scene.getStylesheets().add(getClass().getResource("MainSheet.css").toExternalForm());
+
+
+			Scene scene = new Scene(root,450,300);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 }
