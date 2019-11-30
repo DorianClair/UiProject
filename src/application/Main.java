@@ -47,9 +47,12 @@ public class Main extends Application {
 	public static final View VIEW = new View();
 	public static Scene scene;
 	public static BorderPane root;
+	public static SQLite db;
+	public static CircleChartInfo CIRCLE_INFO = new CircleChartInfo();
+	public final CircleChart CIRCLE_CHART =  new CircleChart();
 	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		SQLite db = new SQLite();
+		db = new SQLite();
 		db.getConnection();
 		try {
 			db.execute("INSERT INTO info VALUES(1,'GRIFF','11/12/19',6,1);");
@@ -69,7 +72,7 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("MainSheet.css").toExternalForm());
 
 
-			Scene scene = new Scene(root,450,300);
+			//Scene scene = new Scene(root,450,300);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

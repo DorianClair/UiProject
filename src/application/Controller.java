@@ -3,12 +3,14 @@ package application;
 import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.BorderPane;
 
 public class Controller {
 	
 	//User clicks the enter into Icon
 	public void mouseReleased1() {
 		System.out.println("Enter info button was pressed");
+		new EnterInfo(Main.root);
 	}
 	//User clicks the graph Icon
 	public void mouseReleased2() {
