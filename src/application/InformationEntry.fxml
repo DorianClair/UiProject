@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane prefHeight="350.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+<Pane prefHeight="350.0" prefWidth="350.0" BorderPane.alignment="CENTER" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.Controller">
    <children>
       <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="318.0" text="Enter Your Informaiton" textFill="WHITE" >
          <font>
@@ -26,7 +26,7 @@
       <Label layoutX="76.0" layoutY="165.0" text="Height:" textFill="WHITE" />
       <Label layoutX="43.0" layoutY="194.0" text="Goal Weight:" textFill="WHITE" />
       <Label layoutX="14.0" layoutY="223.0" prefHeight="17.0" prefWidth="101.0" text="Pounds Per Week:" textFill="WHITE" />
-      <Button layoutX="239.0" layoutY="245.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" text="Submit">
+      <Button layoutX="239.0" layoutY="245.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" text="Submit" onAction="#submit">
          <font>
             <Font size="19.0" />
          </font></Button>
