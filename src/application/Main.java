@@ -55,12 +55,14 @@ public class Main extends Application {
 		db = new SQLite();
 		db.getConnection();
 		try {
-			db.execute("INSERT INTO info VALUES(1,'GRIFF','11/12/19',6,1);");
+			db.execute("INSERT INTO info (NAME, DOB, HEIGHT, GENDER)VALUES('GRIFF','11/12/19',6,1);");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		launch(args);
+		
 	}
+	
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -71,6 +73,10 @@ public class Main extends Application {
 			scene = new Scene(root,800,450);
 			scene.getStylesheets().add(getClass().getResource("MainSheet.css").toExternalForm());
 
+			primaryStage.setOnCloseRequest(event -> {
+			    db.closeConn();
+			    // Save file
+			});
 
 			//Scene scene = new Scene(root,450,300);
 			primaryStage.setScene(scene);

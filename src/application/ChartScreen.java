@@ -43,14 +43,12 @@ public class ChartScreen {
 		    public void handle(ActionEvent e) {
 		    	try {
 
-		    		Main.db.execute("INSERT INTO weight VALUES(44," + Integer.parseInt(t.getText()) + ",'" +date+ "');");
-		    		System.out.println("hey1");
+		    		Main.db.execute("INSERT INTO weight (WEIGHT, DATE) VALUES("+Integer.parseInt(t.getText()) + ",'" +date+ "');");
+		    		//System.out.println("hey1");
 
 		    		ResultSet rs = Main.db.query("SELECT * FROM weight");
-		    		while(!rs.next()) {
-			    		System.out.println("hey2");
-
-		    			System.out.println(rs + "");
+		    		while(rs.next()) {
+		    			System.out.println(rs.getString(0));
 		    		}
 		    	}
 		    		catch(Exception e1)
@@ -93,6 +91,7 @@ public class ChartScreen {
         lineChart.getData().add(series);
         
         VBox vbox2 = new VBox(lineChart);
+        vbox2.setId("sam");
         vbox2.getChildren().addAll(bottem, hbox);
        // root.getChildren().add(vbox2);
         //root.setAlignment(vbox2, Pos.CENTER);
