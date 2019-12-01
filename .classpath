@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javaFx"/>
-	<classpathentry kind="lib" path="/Users/dorianclair/eclipse-workspace/UiProject/src/application/sqlite-jdbc-3.8.11.2.jar"/>
+	<classpathentry kind="lib" path="/Users/griffinhiggins/OneDrive - University of New Brunswick/First_Semester/CS3035/UiProject/src/application/sqlite-jdbc-3.8.11.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

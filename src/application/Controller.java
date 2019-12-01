@@ -2,11 +2,16 @@ package application;
 
 import java.io.IOException;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.BorderPane;
 
 public class Controller {
-	
+	@FXML
+    private void submit() {
+		System.out.println("TEST");
+    }
 	//User clicks the enter into Icon
 	public void mouseReleased1() {
 		System.out.println("Enter info button was pressed");
