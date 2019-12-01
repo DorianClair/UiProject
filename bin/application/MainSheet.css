@@ -1,0 +1,73 @@
+.chart-title {
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 1.6em;
+}
+.axis-label {
+  -fx-text-fill: #ffffff;
+}
+.chart-legend-item{
+    -fx-text-fill: #ffffff;
+}
+.chart-legend {
+	-fx-visible: false;
+	-fx-fill: transparent;
+   -fx-background-color:  transparent;
+   -fx-padding: 20px;
+}
+}
+ 
+.chart-legend-item-symbol{
+		-fx-visible: false;
+	-fx-fill: transparent;
+   -fx-background-radius: 0;
+}
+ 
+.chart-legend-item{
+		-fx-visible: false;
+	-fx-fill: transparent;
+    -fx-text-fill: #191970;
+}
+.chart {
+	    -fx-text-fill: #ffffff;
+    -fx-padding: 10px;
+}
+.BorderPane {
+	-fx-background-color:  #4897ec;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke:#ffffff;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #ffffff;
+}
+.label {
+	    -fx-text-fill: #ffffff;
+ /*  position: absolute;
+  align: center
+  bottom: 0px;
+  margin-right: 400px;
+  margin-left: 400px;
+  left: 0px;
+  right: 0px; */
+}
+.CategoryAxis {
+		    -fx-text-fill: #ffffff;
+	
+}
+.axis {
+    -fx-font-size: 1.4em;    
+    -fx-tick-label-fill: #ffffff;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+#weightPlsId {
+	-fx-padding: 7 0 0 0;
+}
+#dateLabel {
+	-fx-padding:  0 0 7 0;
+}
+#myLabel {
+		-fx-padding:  0 0 7 0;
+	
+}
