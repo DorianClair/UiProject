@@ -1,8 +1,11 @@
 package application;
 
+import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
@@ -35,7 +38,27 @@ public class ChartScreen {
 		Button submit = new Button("Submit");
 		HBox hbox = new HBox(8);
 		hbox.getChildren().addAll(weightPls, t, submit);
-		
+		submit.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override 
+		    public void handle(ActionEvent e) {
+		    	try {
+
+		    		Main.db.execute("INSERT INTO weight VALUES(44," + Integer.parseInt(t.getText()) + ",'" +date+ "');");
+		    		System.out.println("hey1");
+
+		    		ResultSet rs = Main.db.query("SELECT * FROM weight");
+		    		while(!rs.next()) {
+			    		System.out.println("hey2");
+
+		    			System.out.println(rs + "");
+		    		}
+		    	}
+		    		catch(Exception e1)
+		    		{ //Illegal input
+		    			t.clear();
+		    		}
+		    }
+		});
 
 		//bottem.setTextFill(Color.WHITE);
         bottem.setTextAlignment(TextAlignment.CENTER); 
