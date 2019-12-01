@@ -20,14 +20,14 @@ public class CircleChart extends Pane{
 	
 	double percentFilled;
 	double ratio;
-	Canvas c = new Canvas(400,400);
+	Canvas c = new Canvas(800,350);
 	GraphicsContext gc = c.getGraphicsContext2D();
 	TextField t = new TextField();
 	Button b = new Button("");
 	Color myBlue = Color.rgb(72, 150, 236, 1);
 	Color myOrange = Color.rgb(241, 156, 65, 1);
 	Color graphColor;
-	Point2D center = new Point2D(200,200);
+	Point2D center = new Point2D(345,200);
 	
 	public CircleChart(BorderPane root)
 	{
@@ -55,20 +55,18 @@ public class CircleChart extends Pane{
 		h.getChildren().add(t);
 		h.getChildren().add(b);
 		h.setSpacing(2);
-		h.setPadding(new Insets(10,10,50,50));
+		h.setPadding(new Insets(10,10,50,200));
 		
 		VBox v = new VBox();
 		v.getChildren().addAll(c, h);
 		
 		root.setCenter(v);
-		//root.getChildren().addAll(c,t,b);
-		//root.setCenter(vbox);
 	}
 	
 	@Override
 	public void layoutChildren()
 	{
-		c.setWidth(500);
+		c.setWidth(800);
 		c.setHeight(400);
 		draw();
 	}
@@ -93,7 +91,7 @@ public class CircleChart extends Pane{
 		ratio = percentFilled * 270;
 		
 		gc.setFill(myBlue);
-		gc.fillRect(0, 0, 500, 500);
+		gc.fillRect(0, 0, 800, 300);
 		
 		
 		gc.setFill(graphColor);		
@@ -104,10 +102,10 @@ public class CircleChart extends Pane{
 	
 		gc.setFill(Color.WHITE);
 		gc.setFont(new Font("Times", 24));
-		gc.fillText("Calorie Tracker", 110, 60);
+		gc.fillText("Calorie Tracker", 260, 60);
 		gc.setFont(new Font("Times", 14));
 		gc.fillText("Daily Budget: " + (int) Main.CIRCLE_INFO.getMax() + "\nConsumed: " + (int) Main.CIRCLE_INFO.getAmount() + 
-				"\nNet: " + (int)(Main.CIRCLE_INFO.getAmount() - Main.CIRCLE_INFO.getMax()), 142, 175);
+				"\nNet: " + (int)(Main.CIRCLE_INFO.getAmount() - Main.CIRCLE_INFO.getMax()), 285, 175);
 	}
 
 }

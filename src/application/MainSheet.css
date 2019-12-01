@@ -14,7 +14,6 @@
    -fx-background-color:  transparent;
    -fx-padding: 20px;
 }
-}
  
 .chart-legend-item-symbol{
 		-fx-visible: false;
