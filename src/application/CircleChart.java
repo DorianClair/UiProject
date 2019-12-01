@@ -1,11 +1,17 @@
 package application;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import javafx.scene.text.Font;
@@ -14,7 +20,7 @@ public class CircleChart extends Pane{
 	
 	double percentFilled;
 	double ratio;
-	Canvas c = new Canvas();
+	Canvas c = new Canvas(400,400);
 	GraphicsContext gc = c.getGraphicsContext2D();
 	TextField t = new TextField();
 	Button b = new Button("");
@@ -23,9 +29,40 @@ public class CircleChart extends Pane{
 	Color graphColor;
 	Point2D center = new Point2D(200,200);
 	
-	public CircleChart()
+	public CircleChart(BorderPane root)
 	{
-		this.getChildren().addAll(c, t, b);
+		TextField t = new TextField();
+		Button b = new Button("Add Calories");
+		
+		b.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override 
+		    public void handle(ActionEvent e) {
+		    	try{
+		    		int add =  (int) Double.parseDouble(t.getText());
+				    Main.CIRCLE_INFO.setAmount(add);
+				   	t.clear();
+				   	draw();
+		    		}
+		    		catch(Exception e1)
+		    		{ //Illegal input
+		    			t.clear();
+		    		}
+		    }
+		});
+	   	draw();
+
+		HBox h = new HBox();
+		h.getChildren().add(t);
+		h.getChildren().add(b);
+		h.setSpacing(2);
+		h.setPadding(new Insets(10,10,50,50));
+		
+		VBox v = new VBox();
+		v.getChildren().addAll(c, h);
+		
+		root.setCenter(v);
+		//root.getChildren().addAll(c,t,b);
+		//root.setCenter(vbox);
 	}
 	
 	@Override
