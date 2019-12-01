@@ -20,6 +20,7 @@ public class Controller {
 	
 	//User clicks on the clipBoard Icon
 	public void mouseReleased4() {
+		new CircleChart(Main.root);
 		System.out.println("Clipboard button was pressed");
 	}
 
