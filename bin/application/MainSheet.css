@@ -26,6 +26,12 @@
 	-fx-fill: transparent;
     -fx-text-fill: #191970;
 }
+
+.table-view .table-cell {
+    -fx-padding: 0.5em;
+    -fx-border-color: transparent -fx-box-border transparent transparent;
+    -fx-font: 14px "Arial";
+}
 .chart {
 	    -fx-text-fill: #ffffff;
     -fx-padding: 10px;
@@ -39,8 +45,12 @@
 .chart-horizontal-grid-lines {
     -fx-stroke: #ffffff;
 }
+.table-view .column-header-background .label{
+    -fx-text-fill: #000000;
+}
 .label {
 	    -fx-text-fill: #ffffff;
+	    
  /*  position: absolute;
   align: center
   bottom: 0px;
@@ -63,6 +73,9 @@
 
 #weightPlsId {
 	-fx-padding: 7 0 0 0;
+}
+#helpTitle {
+	-fx-font-size: 3.4em;    
 }
 #dateLabel {
 	-fx-padding:  0 0 7 0;

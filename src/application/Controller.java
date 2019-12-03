@@ -2,9 +2,13 @@ package application;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -58,6 +62,7 @@ public class Controller {
 			WEIGHT.setPromptText("Lbs...");
 			PPW.setPromptText("Lbs...");
 		}
+		
 	}
 
 	@FXML
@@ -123,6 +128,8 @@ public class Controller {
 	}
 	
 	
+	
+	
 	//User clicks the enter info Icon
 	public void mouseReleased1() throws SQLException {
 		System.out.println("Enter info button was pressed");
@@ -144,6 +151,11 @@ public class Controller {
 	public void mouseReleased3() {
 		System.out.println("settings button was pressed");
 	}
+	//User clicks on the help Icon
+		public void mouseReleased5() {
+			new HelpScreen(Main.root);
+			System.out.println("settings button was pressed");
+		}
 
 	public Controller() {
 	}
