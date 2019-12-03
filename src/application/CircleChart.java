@@ -93,11 +93,16 @@ public class CircleChart extends Pane{
 		gc.setFill(myBlue);
 		gc.fillRect(0, 0, 800, 300);
 		
+		gc.setFill(myOrange);
+		gc.fillRect(100, 25, 500, 600);
+		
+		gc.setFill(Color.CORNFLOWERBLUE);
+		gc.fillRect(110, 35, 480, 304);
 		
 		gc.setFill(graphColor);		
 		gc.fillArc(center.getX() - 100, center.getY() - 100, 200,  200, 225, -ratio, ArcType.ROUND);		
 	
-		gc.setFill(myBlue);
+		gc.setFill(Color.CORNFLOWERBLUE);
 		gc.fillOval(center.getX() - 90, center.getY() - 90, 180, 180);
 	
 		gc.setFill(Color.WHITE);
