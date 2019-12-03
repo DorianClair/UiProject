@@ -60,9 +60,9 @@ public class SQLite {
 		System.out.println("SQLite.java QUERIED: " + str);
 		Statement state = con.createStatement();
 		ResultSet res = state.executeQuery(str);
-//		while(res.next()) {
-//			System.out.println(res.getInt("WEIGHT"));
-//		}
+		while(res.next()) {
+			System.out.println(res.getInt("WEIGHT"));
+		}
 		return res;
 	}
 	public void closeConn() {
