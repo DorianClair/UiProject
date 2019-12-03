@@ -52,6 +52,7 @@ public class Main extends Application {
 	//public final CircleChart CIRCLE_CHART =  new CircleChart();
 	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		System.out.println("hello world");
 		db = new SQLite();
 		db.getConnection();
 		try {
