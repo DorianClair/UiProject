@@ -48,18 +48,12 @@ public class Main extends Application {
 	public static Scene scene;
 	public static BorderPane root;
 	public static SQLite db;
-	public static CircleChartInfo CIRCLE_INFO = new CircleChartInfo();
-	//public final CircleChart CIRCLE_CHART =  new CircleChart();
 	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		System.out.println("hello world");
 		db = new SQLite();
 		db.getConnection();
-		try {
-			db.execute("INSERT INTO info (NAME, DOB, HEIGHT, GENDER)VALUES('GRIFF','11/12/19',6,1);");
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+
 		launch(args);
 		
 	}
