@@ -63,7 +63,7 @@ public class HelpScreen {
                     new helpIssue("I can't open the file", "Open the project in intellij and press on the green \n circle with an arrow to run the project"),
                     new helpIssue("I get a javafx or sql error", "at the top of eclipse, go to project -> properties \n -> java build path, make sure the javafx/sqlLite jars exist"),
                     new helpIssue("I'm not losing weight", "You need to utilize the app more and perhaps \n donate money to make the app better"),
-                    new helpIssue("My calorie budget is not displaying", "Make sure you entered and submitted a \nvalid infromation form")
+                    new helpIssue("My calorie budget is not displaying", "Make sure you entered and submitted a \nvalid information form")
                 );
         table.setFixedCellSize(Region.USE_COMPUTED_SIZE);
         table.setItems(data);
