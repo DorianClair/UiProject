@@ -64,7 +64,7 @@ public class HelpScreen {
                     new helpIssue("I get a javafx or sql error", "at the top of eclipse, go to project -> properties \n -> java build path, make sure the javafx/sqlLite jars exist"),
                     new helpIssue("I'm not losing weight", "You need to utilize the app more and perhaps \n donate money to make the app better"),
                     new helpIssue("My calorie budget is not displaying", "Make sure you entered and submitted a \nvalid information form"),
-                    new helpIssue("My estimated gaol date isn't updating", "Refresh the page")
+                    new helpIssue("My estimated goal date isn't updating", "Refresh the page")
                 );
         table.setFixedCellSize(Region.USE_COMPUTED_SIZE);
         table.setItems(data);
