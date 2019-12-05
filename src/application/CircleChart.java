@@ -1,6 +1,7 @@
 package application;
 
 import java.sql.Date;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -14,7 +15,6 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -22,6 +22,16 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import javafx.scene.text.Font;
+
+/* Written and Developed By Sam White
+ * 
+ * Inputs: The root BorderPane to add the circleChart to
+ * 
+ * Function: Displays a wheel indicating how many calories the user has consumed thus far
+ * today, and how many they have remaining.
+ * Features: Wheel fills in an arc as user inputs more calories, user can input neative calories to indicate
+ * a workout, or burning calories in some other way. The arc turns red when the user goes above their budget.
+ * */
 
 public class CircleChart extends Pane{
 	
@@ -183,6 +193,9 @@ public class CircleChart extends Pane{
 			calConsumed = Integer.parseInt(rs1.getString("consumed"));
 			calBudget = Integer.parseInt(rs1.getString("budget"));
 		}
+		
+		rs1.close();
+		rs2.close();
 		
 	}
 	
