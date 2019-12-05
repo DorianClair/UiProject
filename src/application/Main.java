@@ -7,7 +7,13 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
-
+/* Written and Developed By Team Calorie Tracker Pro
+ * 
+ * Inputs:
+ * 
+ * Function:
+ * Features:
+ * */
 public class Main extends Application {
 	
 	public static final Controller CONTROLLER = new Controller();

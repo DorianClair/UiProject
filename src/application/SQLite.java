@@ -4,6 +4,14 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+/* Written and Developed By Griffin Higgins
+ * 
+ * Inputs:
+ * 
+ * Function:
+ * Features:
+ * */
 public class SQLite {
 	private static Connection con;
 	public ResultSet displayUsers() throws ClassNotFoundException, SQLException {

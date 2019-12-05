@@ -13,6 +13,13 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/* Written and Developed By Dorian Clair & Griffin Higgins
+ * 
+ * Inputs:
+ * 
+ * Function:
+ * Features:
+ * */
 public class Controller {
 	
 	
@@ -144,12 +151,13 @@ public class Controller {
 
 	//User clicks on the settings Icon
 	public void mouseReleased3() {
-		System.out.println("settings button was pressed");
+		new About(Main.root);
+		System.out.println("about button was pressed");
 	}
 	//User clicks on the help Icon
 		public void mouseReleased5() {
 			new HelpScreen(Main.root);
-			System.out.println("settings button was pressed");
+			System.out.println("help button was pressed");
 		}
 
 	public Controller() {

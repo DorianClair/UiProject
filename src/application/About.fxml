@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="447.0" prefWidth="697.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f19c41" height="147.0" layoutX="75.0" layoutY="259.0" stroke="TRANSPARENT" strokeType="INSIDE" width="597.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="131.0" layoutX="84.0" layoutY="267.0" stroke="TRANSPARENT" strokeType="INSIDE" width="580.0" />
+      <Label alignment="BOTTOM_LEFT" contentDisplay="RIGHT" layoutX="6.0" layoutY="401.0" prefHeight="44.0" prefWidth="481.0" text="Calorie Tracker Pro Team: Dorian Clair, Griffin Higgins, Sam White" wrapText="true" />
+      <Circle fill="#f19c41" layoutX="374.0" layoutY="151.0" radius="91.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="374.0" layoutY="151.0" radius="82.0" stroke="#00000002" strokeType="INSIDE" />
+      <Circle fill="#f19c41" layoutX="374.0" layoutY="151.0" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f19c41" layoutX="374.0" layoutY="151.0" radius="69.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="374.0" layoutY="151.0" radius="60.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="154.0" layoutX="369.0" layoutY="76.0" stroke="#00000005" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="8.0" layoutX="295.0" layoutY="147.0" stroke="TRANSPARENT" strokeType="INSIDE" width="157.0" />
+      <Circle fill="#ff8f16" layoutX="374.0" layoutY="151.0" radius="53.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="374.0" layoutY="151.0" radius="42.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="395.0" layoutY="124.0" stroke="TRANSPARENT" strokeType="INSIDE" width="32.0" />
+      <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="156.0" layoutY="275.0" prefHeight="76.0" prefWidth="460.0" text="Calorie Tracker Pro manages inportant aspects of your health and fitness data! Constructed with a rock solid JavaFx code base and impervious SQLite database nothing can get by Calorie Tracker Pro!  Enter your fitness data and be amazed by what you can learn! " wrapText="true" />
+      <Label alignment="BOTTOM_LEFT" contentDisplay="RIGHT" layoutX="90.0" layoutY="346.0" prefHeight="35.0" prefWidth="594.0" text="Calorie Tracker Pro, manageing your data so you can get back to doing the things you love!" underline="true" wrapText="true">
+      	 <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="114.0" layoutY="2.0" prefHeight="47.0" prefWidth="519.0" text="Calorie Tracker Pro" wrapText="true">
+      	<font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

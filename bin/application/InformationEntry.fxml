@@ -11,6 +11,13 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
+<!-- Written and Developed By Griffin Higgins
+
+Inputs:
+
+Function:
+Features: -->
+
 <Pane prefHeight="400.0" prefWidth="700.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f09b41" height="288.0" layoutX="159.0" layoutY="32.0" stroke="#f7f7f700" strokeType="INSIDE" width="383.0" />
