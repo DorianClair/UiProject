@@ -3,6 +3,8 @@ package application;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 import javafx.event.ActionEvent;
@@ -39,9 +41,59 @@ public class ChartScreen {
 		//Make a new date to use for the text at the bottom of the page
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+		SimpleDateFormat formatter2 = new SimpleDateFormat("dd-MM-yyyy");
+		
+		int ppw;
+		int currentWeight;
+		int goalWeight;
+		int diff;
+		int weeksToGoal;
+		String completionDate = "";
+		Date goalDate;
+		
+		try {
+			ppw = getPPW();
+		} catch (SQLException e2) {
+			ppw = 0;
+		}
+		
+		try {
+			currentWeight = getCurrentWeight();
+		} catch (SQLException e2) {
+			currentWeight = 0;
+		}
+		
+		try {
+			goalWeight = getGoalWeight();
+		} catch (SQLException e2) {
+			goalWeight = 0;
+		}
+		
+		diff = currentWeight - goalWeight;
+		
+		if(ppw == 0 || goalWeight == 0 || currentWeight == 0)
+		{
+			completionDate = "N/A";
+		}
+		else
+		{
+			if (diff <= 0)
+			{
+				completionDate = "Goal Achieved";
+			}
+			else
+			{
+				weeksToGoal = ((int) diff/ppw) + 1;
+				
+				Calendar calendar = Calendar.getInstance();
+				calendar.setTime(java.sql.Date.valueOf(LocalDate.now()));            
+				calendar.add(Calendar.DAY_OF_YEAR, weeksToGoal*7);
+				completionDate = formatter2.format(calendar.getTime());
+			}
+		}
 		
 		//This is a really gross print statements but if you touch it it will break things.
-		Label bottem = new Label("                                            Current date: " + formatter.format(date) + "  |  " + "Estimated Goal Date: 18-12-2019 ");
+		Label bottem = new Label("                                            Current date: " + formatter.format(date) + "  |  " + "Estimated Goal Date: " + completionDate);
 		Label weightPls = new Label("                               Please Enter your Weight today: ");
 		
 		//Add a text field & submit button, add them to an hbox
@@ -131,6 +183,36 @@ public class ChartScreen {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public int getCurrentWeight() throws SQLException
+	{
+		ResultSet rs = Main.db.query("SELECT * FROM weight ORDER BY DATE DESC LIMIT 1");
+		
+		if(rs.next())
+				return Integer.parseInt(rs.getString("WEIGHT"));
+		else
+			return 0;
+	}
+	
+	public int getGoalWeight() throws SQLException
+	{
+		ResultSet rs = Main.db.query("SELECT NAME, DOB, HEIGHT, WEIGHT, PPW, GENDER FROM info");
+		
+		if(rs.next())
+			return Integer.parseInt(rs.getString("WEIGHT"));
+		else
+			return 0;
+	}
+	
+	public int getPPW() throws SQLException
+	{
+		ResultSet rs = Main.db.query("SELECT NAME, DOB, HEIGHT, WEIGHT, PPW, GENDER FROM info");
+		
+		if(rs.next())
+			return Integer.parseInt(rs.getString("PPW"));
+		else
+			return 0;
 	}
 
 }
