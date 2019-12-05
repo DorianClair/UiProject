@@ -28,14 +28,6 @@
                   <Insets bottom="10.0" left="25.0" right="25.0" />
                </VBox.margin>
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="50.0" onMouseReleased="#mouseReleased3" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Icons/Settings.png" />
-               </image>
-               <VBox.margin>
-                  <Insets bottom="10.0" left="25.0" right="25.0" />
-               </VBox.margin>
-            </ImageView>
             <ImageView fitHeight="50.0" fitWidth="50.0" onMouseReleased="#mouseReleased4" pickOnBounds="true" preserveRatio="true" scaleX="1.1" scaleY="1.1">
                <image>
                   <Image url="@../../Icons/Clipboard.png" />
