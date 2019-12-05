@@ -22,7 +22,7 @@ Features: -->
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f09b41" height="288.0" layoutX="159.0" layoutY="32.0" stroke="#f7f7f700" strokeType="INSIDE" width="383.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3982d0" height="272.0" layoutX="167.0" layoutY="39.0" stroke="WHITE" strokeType="INSIDE" width="368.0" />
-      <Label layoutX="193.0" layoutY="47.0" prefHeight="42.0" prefWidth="330.0" text="Enter Your Information" textFill="WHITE">
+      <Label layoutX="193.0" layoutY="47.0" prefHeight="42.0" prefWidth="6030.0" text="Enter Your Information" textFill="WHITE">
          <font>
             <Font size="34.0" />
          </font>
