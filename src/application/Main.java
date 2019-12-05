@@ -31,7 +31,13 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
 
-
+/* Written and Developed By Team Calorie Tracker Pro
+ * 
+ * Inputs:
+ * 
+ * Function:
+ * Features:
+ * */
 public class Main extends Application {
 	
 	public String name; //user's first name

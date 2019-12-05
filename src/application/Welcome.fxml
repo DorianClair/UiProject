@@ -38,16 +38,6 @@
                   <Image url="@../Icons/EnterInfo.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="36.0" fitWidth="58.0" layoutX="233.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Icons/Graph.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="54.0" layoutX="235.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Icons/Settings.png" />
-               </image>
-            </ImageView>
             <ImageView fitHeight="50.0" fitWidth="50.0" onMouseReleased="#mouseReleased5" pickOnBounds="true" preserveRatio="true" scaleX="1.1" scaleY="1.1">
                <image>
                   <Image url="@../../Icons/info.png" />
@@ -55,6 +45,16 @@
                <VBox.margin>
                   <Insets bottom="10.0" left="25.0" right="25.0" />
                </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="58.0" layoutX="233.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/Graph.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="54.0" layoutX="235.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/questionMark.png" />
+               </image>
             </ImageView>
          </children>
       </Pane>
@@ -80,7 +80,7 @@
             </ImageView>
             <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Icons/Settings.png" />
+                  <Image url="@../Icons/questionMark.png" />
                </image>
                <VBox.margin>
                   <Insets bottom="10.0" left="25.0" right="25.0" />
