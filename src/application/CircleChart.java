@@ -183,6 +183,9 @@ public class CircleChart extends Pane{
 			calBudget = Integer.parseInt(rs1.getString("budget"));
 		}
 		
+		rs1.close();
+		rs2.close();
+		
 	}
 	
 	private void refresh() throws SQLException
