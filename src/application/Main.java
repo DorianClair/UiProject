@@ -17,8 +17,6 @@ import javafx.scene.layout.BorderPane;
 public class Main extends Application {
 	
 	public static final Controller CONTROLLER = new Controller();
-	public static final Model MODEL = new Model();
-	public static final View VIEW = new View();
 	public static Scene scene;
 	public static BorderPane root;
 	public static SQLite db;

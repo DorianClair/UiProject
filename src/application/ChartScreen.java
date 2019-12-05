@@ -21,7 +21,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.control.TextField;
 
 
-/* Written and Developed By Dorian Clair
+/* Written and Developed By Dorian Clair and Sam White
  * 
  * Inputs: The root BorderPane you need to add a chartScreen to
  * 
@@ -71,18 +71,19 @@ public class ChartScreen {
 		
 		diff = currentWeight - goalWeight;
 		
+		//Formats the displayed goal completion date
 		if(ppw == 0 || goalWeight == 0 || currentWeight == 0)
-		{
+		{ // There is an error with the inputed info, so the date can't be calculated
 			completionDate = "N/A";
 		}
 		else
 		{
 			if (diff <= 0)
-			{
+			{ // Current weight is less than or equal to goal weight
 				completionDate = "Goal Achieved";
 			}
 			else
-			{
+			{ // calculate the estimated goal date
 				weeksToGoal = ((int) diff/ppw) + 1;
 				
 				Calendar calendar = Calendar.getInstance();
