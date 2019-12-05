@@ -34,9 +34,9 @@ public class ChartScreen {
 	public static TextField t;
 	
 	public ChartScreen(BorderPane root) {
-		//Whatever is in the borderPanes Centre, clear it
+		//Whatever is in the borderPanes Center, clear it
 		root.setCenter(null);
-		//Make a new date to use for the text at the bottem of the page
+		//Make a new date to use for the text at the bottom of the page
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 		
@@ -56,7 +56,7 @@ public class ChartScreen {
         NumberAxis yAxis = new NumberAxis();
         yAxis.setLabel("Weight in LB");
 
-        //Defind linechart itself
+        //Define linechart itself
         LineChart lineChart = new LineChart(xAxis, yAxis);
         lineChart.setTitle("Weight History");
         lineChart.setLegendVisible(false);

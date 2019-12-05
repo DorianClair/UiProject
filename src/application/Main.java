@@ -1,6 +1,4 @@
 package application;
-	
-import java.util.Date;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,14 +10,6 @@ import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
 	
-	public String name; //user's first name
-	public double startWeight; // user's starting weight
-	public double goalWeight; // user's goal weight
-	public int heightInches; //user's height in inches
-	public Date dateOfBirth; //user's date of birth
-	public double poundsPerWeek; //user's desired pounds to lose per week
-	public Boolean gender; //user's gender
-	
 	public static final Controller CONTROLLER = new Controller();
 	public static final Model MODEL = new Model();
 	public static final View VIEW = new View();
@@ -28,7 +18,6 @@ public class Main extends Application {
 	public static SQLite db;
 	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		System.out.println("hello world");
 		db = new SQLite();
 		db.getConnection();
 
