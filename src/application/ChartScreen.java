@@ -34,6 +34,15 @@ public class ChartScreen {
 	public static Button submit;
 	public static XYChart.Series series;
 	public static TextField t;
+	int ppw;
+	int currentWeight;
+	int goalWeight;
+	int diff;
+	int weeksToGoal;
+	String completionDate = "";
+	Date goalDate;
+	Label bottem;
+	VBox vbox2;
 	
 	public ChartScreen(BorderPane root) {
 		//Whatever is in the borderPanes Center, clear it
@@ -43,13 +52,7 @@ public class ChartScreen {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 		SimpleDateFormat formatter2 = new SimpleDateFormat("dd-MM-yyyy");
 		
-		int ppw;
-		int currentWeight;
-		int goalWeight;
-		int diff;
-		int weeksToGoal;
-		String completionDate = "";
-		Date goalDate;
+		
 		
 		try {
 			ppw = getPPW();
@@ -93,7 +96,7 @@ public class ChartScreen {
 		}
 		
 		//This is a really gross print statements but if you touch it it will break things.
-		Label bottem = new Label("                                            Current date: " + formatter.format(date) + "  |  " + "Estimated Goal Date: " + completionDate);
+		bottem = new Label("                                            Current date: " + formatter.format(date) + "  |  " + "Estimated Goal Date: " + completionDate);
 		Label weightPls = new Label("                               Please Enter your Weight today: ");
 		
 		//Add a text field & submit button, add them to an hbox
@@ -128,22 +131,68 @@ public class ChartScreen {
 		    		Date date = new Date();
 		    		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-YY HH:mm:ss");
 		    		formatter.format(date);
-		    		
+		    		System.out.println("Added value : " +Integer.parseInt(t.getText()));
+		    		System.out.println("with date: " +formatter.format(date));
+
 		    		Main.db.execute("INSERT INTO weight (WEIGHT, DATE) VALUES("+Integer.parseInt(t.getText()) + ",'" +date+ "');");
 		    		addData(series,formatter.format(date), Integer.parseInt(t.getText()));
-
+		    		diff = currentWeight - goalWeight;
+		    		
+		    		try {
+		    			ppw = getPPW();
+		    		} catch (SQLException e2) {
+		    			ppw = 0;
 		    		}
+		    		
+		    		try {
+		    			currentWeight = getCurrentWeight();
+		    		} catch (SQLException e2) {
+		    			currentWeight = 0;
+		    		}
+		    		
+		    		try {
+		    			goalWeight = getGoalWeight();
+		    		} catch (SQLException e2) {
+		    			goalWeight = 0;
+		    		}
+		    		
+		    		diff = currentWeight - goalWeight;
+		    		
+		    		if(ppw == 0 || goalWeight == 0 || currentWeight == 0)
+		    		{
+		    			completionDate = "N/A";
+		    		}
+		    		else
+		    		{
+		    			if (diff <= 0)
+		    			{
+		    				completionDate = "Goal Achieved";
+		    			}
+		    			else
+		    			{
+		    				weeksToGoal = ((int) diff/ppw) + 1;
+		    				
+		    				Calendar calendar = Calendar.getInstance();
+		    				calendar.setTime(java.sql.Date.valueOf(LocalDate.now()));            
+		    				calendar.add(Calendar.DAY_OF_YEAR, weeksToGoal*7);
+		    				completionDate = formatter2.format(calendar.getTime());
+		    				bottem.setText("                                            Current date: " + formatter.format(date) + "  |  " + "Estimated Goal Date: " + completionDate);
+		    				//vbox2.getChildren().remove("bottem");
+		    				//vbox2.getChildren().add(bottem);
+		    			}
+		    		}
+		    	}
 		    		catch(Exception e1)
 		    		{ //Illegal input
 		    			t.clear();
 		    		}
-		    }
-		});        
+		    
+		}});        
        
 
         //Finalize, append to vbox and then add to the root
         lineChart.getData().add(series);
-        VBox vbox2 = new VBox(lineChart);
+        vbox2 = new VBox(lineChart);
         vbox2.getChildren().addAll(bottem, hbox);
         root.setCenter(vbox2);
 	}
@@ -173,8 +222,12 @@ public class ChartScreen {
 		}
 		try {
 			while(rs2.next()) {
-			    series.getData().add(new XYChart.Data(rs2.getString("DATE"), rs.getInt("WEIGHT")));
+				System.out.println(rs2.getString("DATE") + "");
+				System.out.println(rs.getInt("WEIGHT") + "");
+
 			    rs.next();
+
+			    series.getData().add(new XYChart.Data(rs2.getString("DATE"), rs.getInt("WEIGHT")));
 				//System.out.println(rs.getString("DATE"));
 				//System.out.println(rs.getDate("DATE"));
 
@@ -190,6 +243,7 @@ public class ChartScreen {
 		ResultSet rs = Main.db.query("SELECT * FROM weight ORDER BY DATE DESC LIMIT 1");
 		
 		if(rs.next())
+				
 				return Integer.parseInt(rs.getString("WEIGHT"));
 		else
 			return 0;

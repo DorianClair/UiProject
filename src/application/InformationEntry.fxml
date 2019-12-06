@@ -24,7 +24,7 @@ Features: -->
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3982d0" height="272.0" layoutX="167.0" layoutY="39.0" stroke="WHITE" strokeType="INSIDE" width="368.0" />
       <Label layoutX="193.0" layoutY="47.0" prefHeight="42.0" prefWidth="6030.0" text="Enter Your Information" textFill="WHITE">
          <font>
-            <Font size="34.0" />
+            <Font size="28.0" />
          </font>
       </Label>
       <Label alignment="CENTER_RIGHT" layoutX="206.0" layoutY="90.0" prefHeight="25.0" prefWidth="95.0" text="Full Name:" textFill="WHITE" wrapText="true" />
@@ -34,7 +34,7 @@ Features: -->
       <Label alignment="CENTER_RIGHT" layoutX="174.0" layoutY="243.0" prefHeight="22.0" prefWidth="127.0" text="Pounds Per Week:" textFill="WHITE" wrapText="true" />
       <Button layoutX="423.0" layoutY="262.0" mnemonicParsing="false" onAction="#submit" prefHeight="0.0" prefWidth="84.0" text="Submit">
          <font>
-            <Font size="19.0" />
+            <Font size="12.0" />
          </font></Button>
       <TextField fx:id="NAME" layoutX="305.0" layoutY="89.0" prefHeight="27.0" prefWidth="120.0" />
       <DatePicker fx:id="DOB" layoutX="305.0" layoutY="151.0" prefHeight="27.0" prefWidth="120.0" />
@@ -47,7 +47,7 @@ Features: -->
       </fx:define>
 	      <ToggleButton toggleGroup="$tg" fx:id="TGLBTNM" accessibleRole="TOGGLE_BUTTON" layoutX="305.0" layoutY="120.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="60.0" text="Male">
 	      </ToggleButton>
-	      <ToggleButton toggleGroup="$tg" fx:id="TGLBTNF" accessibleRole="TOGGLE_BUTTON" layoutX="365.0" layoutY="120.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="60.0" text="Female">
+	      <ToggleButton toggleGroup="$tg" fx:id="TGLBTNF" accessibleRole="TOGGLE_BUTTON" layoutX="365.0" layoutY="120.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="90.0" text="Female">
 	      </ToggleButton>
       <Rectangle fx:id="MSGBOXA" arcHeight="5.0" arcWidth="5.0" fill="#f09b41" height="73.0" layoutX="159.0" layoutY="315.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="383.0" />
       <Rectangle fx:id="MSGBOXB" arcHeight="5.0" arcWidth="5.0" fill="#3982d0" height="63.0" layoutX="167.0" layoutY="318.0" stroke="WHITE" strokeType="INSIDE" visible="false" width="368.0" />
